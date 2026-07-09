@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Application</title>
+    <meta charset="UTF-8">
+	<style>body { margin: 0; padding: 0; background-color: #3498db; } #root { font-size: 300%; }</style>
+</head>
+<body>
+	<script>
+		window.addEventListener('message', function(event) {
+			document.getElementById('root').innerHTML = document.getElementById('root').innerHTML + '<br /><br /><code>' + JSON.stringify(JSON.parse(event.data), null, 2) + '</code>';
+		}, false);
+	</script>
+	<div id="root"></div>
+</body>
+</html>

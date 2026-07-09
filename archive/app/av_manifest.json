@@ -1,0 +1,33 @@
+{
+    "name":        "SampleApp",
+    "description": "This is a sample app",
+    "version":     "1.0.0.0",
+    "build":       "2019-02-07T15:14:02+00:00".
+    "author": {
+        "email":        "bmahe@actrivia.net",
+        "name":         "Benoît Mahé",
+        "organization": "STRATACACHE"
+    },
+    tags: { // Other tags to associate with the App in the CMS. Note: a single value is allowed per key.
+      key: "value"
+    },
+    "params": [
+        {
+            "name":        "p",
+            "description": "the best parameter",
+            "required":    true
+        }
+    ],
+    assets: {
+        insidemax: 10000,
+        inside:    [ "^js/.*" ]     // Assets intrinsically unique for this app version.
+        aside:     [ "^shared/.*" ] // Assets shared between app versions (or apps themselves).
+        ignore:    [ "\.log$" ]     // Assets that must be removed from the archive.
+    },
+    capabilities: {
+        reload:  "notify",
+        preload: "notify",
+        suspend: "none",
+        hide:    "always"
+    }
+}
